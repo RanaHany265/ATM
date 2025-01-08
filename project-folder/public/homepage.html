@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>ATM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="logo">
-        <img src="logo.png" alt="Logo" />
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li >
+                <a href="#home">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#category">Category</a>
+                <ul class="dropdown-menu">
+                    <li> <a href="/category/Hodies"> Hodies</a></li>
+                    <li><a href="/category/Pants">Pants</a></li>
+                    <li><a href="/category/Socks">Socks</a></li>
+                    <li><a href="/category/Stickers">Stickers</a></li>
+                    <li><a href="/category/T-shirt">T-shirt</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+    </nav>
+    <div class="barone">
+        <img src="lod4.png" alt="log" class="image">
     </div>
-    <div id="slider">
-        <div class="slide">
-            <img src="item1.jpg" alt="Item 1">
-            <button onclick="location.href='/shop.html'">Shop Now</button>
-        </div>
-        <div class="slide">
-            <img src="item2.jpg" alt="Item 2">
-            <button onclick="location.href='/shop.html'">Shop Now</button>
-        </div>
-    </div>
+    
 </body>
 </html>
