@@ -1,22 +1,11 @@
-// const messageElement = document.getElementById('welcome-message');
-// const message = "Thank for choosing us";
-// let index = 0;
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0 ;
+const totalslides = slides.length ;
 
-// function typeEffect() {
-//     if (index < message.length) {
-//         messageElement.innerText += message[index];
-//         index++;
-//         setTimeout(typeEffect, 100);
-//     } else {
-//         setTimeout(() => {
-//             fetch('/get-homepage-url')
-//                 .then((response) => response.json())
-//                 .then((data) => {
-//                     window.location.href = data.url;
-//                 })
-//                 .catch((err) => console.error("Error fetching homepage URL:", err));
-//         }, 2000);
-//     }
-// }
+function nextslide(){
+    currentIndex = (currentIndex +1) % totalslides;
+    slider.style.transform = `translateX(-$ {currentIndex * 600}p.x)`;
+}
 
-// typeEffect();
+setInterval(nextslide, 3000);

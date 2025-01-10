@@ -1,15 +1,30 @@
-.barone{
+.barone {
     display: flex;
     justify-content: center;
-    align-items :first baseline;
+    align-items: center;
+    flex-direction: column; 
     height: 60vh;
     background-color: black;
 }
-.barone img{
-    width: 40%;
-    height:150%;
+.barone .content {
+    text-align: center; 
+    top: auto;
+}
+
+.barone img {
+    width: 60%;
+    height: auto; 
     position: relative;
-    top: -160px;    
+    margin-top:-300px; 
+}
+
+.image-caption {
+    margin-top: -290px;
+    font-size: 4rem; 
+    color: rgb(242, 242, 242); 
+    font-weight: bold; 
+    text-align: center;
+    font-family:initial;
 }
 .navbar{
     background-color: black;
@@ -68,4 +83,49 @@
 }
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+.chlidern{
+    text-align: center;
+}
+.caption1{
+    font-size:3rem;
+    font-weight:bolder;
+    margin-bottom: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:initial;
+    text-align: center;
+}
+.slide-container{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+}
+.slider{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+.slide{
+    flex: none;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.slide img{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-300px); }
+    66% { transform: translateX(-600px); }
+    100% { transform: translateX(0); }
+}
+.slider {
+    animation: slideAnimation 6s infinite;
 }
